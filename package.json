@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "yarn && lerna run build",
+    "check-deps": "lerna run check-deps",
+    "clean": "lerna run clean --parallel && rimraf node_modules/",
+    "fix": "yarn lint --fix ; yarn format --list-different",
+    "format": "prettier --write .",
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore packages/*/src",
+    "release": "yarn build && lerna publish --no-private",
+    "watch": "yarn build && lerna run watch --parallel"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-unicorn": "^41.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-packagejson": "^2.2.15",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.0-dev.20220216"
+  }
+}

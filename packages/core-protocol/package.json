@@ -1,0 +1,39 @@
+{
+  "name": "@typestream/core-protocol",
+  "version": "0.0.0",
+  "description": "Internal package used by TypeStream to communicate between the SDK and project code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scopashq/typestream",
+    "path": "packages/core-protocol"
+  },
+  "license": "MIT",
+  "author": "Scopas Technologies GmbH",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./utils": "./dist/utils.js",
+    "./resources": "./dist/resources/index.js"
+  },
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist/ && tsc",
+    "check-deps": "depcheck",
+    "clean": "rimraf dist/ node_modules/",
+    "watch": "tsc --watch --preserveWatchOutput"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.55.0",
+    "node-html-parser": "^5.3.3",
+    "zod": "^3.11.6"
+  },
+  "devDependencies": {
+    "@types/node": "16",
+    "typescript": "^4.7.0-dev.20220216"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "editor.rulers": [80, 120],
+
+  // Prettier for automatic code formatting
+  "[typescript][javascript][json][jsonc][yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ESLint for code quality rules
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.runtime": "node",
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "debug.javascript.terminalOptions": {
+    "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
+  }
+}

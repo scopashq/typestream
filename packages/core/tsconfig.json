@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2021",
+    "lib": ["ES2021"],
+    "module": "NodeNext",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "rootDir": "src"
+  },
+  "include": ["**/*.ts"]
+}
