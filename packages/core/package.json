@@ -1,6 +1,6 @@
 {
   "name": "@typestream/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core library to be used in TypeStream projects",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@google-cloud/bigquery": "^5.11.0",
-    "@typestream/core-protocol": "^0.0.1",
+    "@typestream/core-protocol": "^0.0.2",
     "acorn": "^8.7.0",
     "acorn-walk": "^8.2.0",
     "date-fns": "^2.28.0",
