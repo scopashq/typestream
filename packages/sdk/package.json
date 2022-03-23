@@ -1,6 +1,6 @@
 {
   "name": "@typestream/sdk",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "SDK for the rapid development of data transformation projects",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "@oclif/plugin-help": "^5",
     "@supercharge/promise-pool": "^2.1.0",
     "@types/dotenv-safe": "^8.1.2",
-    "@typestream/core-protocol": "*",
+    "@typestream/core-protocol": "^0.0.1",
     "ansi-escapes": "^5.0.0",
     "chalk": "^5.0.0",
     "chalk-template": "^0.3.1",
