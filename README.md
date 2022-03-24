@@ -11,17 +11,37 @@ and put little to no emphasis on developer experience.
 TypeStream allows you to get started within seconds, iterate blazingly fast over type-safe transformation code
 and work with common data storage services either locally or in the cloud.
 
-## Installation
+## Getting started
+
+Make sure you have [Node.js](https://nodejs.dev/) (at least 16.0.0) installed and scaffold a new project using:
 
 ```bash
-npm install -g @typestream/sdk
+$ npm init typestream --get-started
 ```
 
-To get started with a guided tutorial:
+### Opening the project
 
-```bash
-tyst get-started
+> **Note:** Right now, we only officially support [Visual Studio Code](https://code.visualstudio.com/) as some important TypeStream features like zero-setup debugging require editor-specific configuration.
+
+To get started developing your project, open the created folder in VS Code. At this point, you will probably be asked whether you want to use the workspace TypeScript version: press "Allow" to continue. If you don't see the prompt, you can also [configure this manually](https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript).
+
+### Working on a pipe
+
+Pipes are at the core of what TypeStream does as they contain the data transformation code of your project. Since you've specified the `--get-started` flag while creating the project, you should already see a pipe under `src/pipes/transform-product.ts`. Feel free to read through it to get a general idea of what it contains.
+
+To try out the pipe and experiment with changes, you can start TypeStream in watch mode. To do that, open up an [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) (this is necessary for debugging support) and run the following command:
+
 ```
+$ npx tyst watch <pipe-name>
+```
+
+Make sure to replace `<pipe-name>` with the name of the pipe you want to work on. If you're following the getting started guide, that's going to be `transform-product`.
+
+If everything's working correctly, TypeStream should now download a number of sample files and then attempt to process them using the pipe. Since you're in watch mode, TypeStream will start over whenever you save the file, allowing you to quickly experiment with changes to your transformation.
+
+At this point, feel free to play around with the code and give all of TypeStream's different features a try, some of which are documented in the example file, others right here in the README.
+
+> If you get stuck with anything, want to suggest a new feature, or share general feedback, please don't hesitate to reach out to us by [creating an issue](https://github.com/scopashq/typestream/issues) — we'd love to hear from you! ❤️
 
 ## Features
 
@@ -51,13 +71,6 @@ No problem! TypeStream’s modular resource system allows to read from and write
 ### Multi-step pipelines
 
 To keep things more maintainable or to aggregate multiple streams of data into one you can push into a resource in one pipe and consume it in the next.
-
-## Pre-requisites
-
-For TypeStream to work, you will need to have the following software installed already:
-
-- [Node.js](https://nodejs.org/en/download/) (minimum version 16.0.0)
-- [Visual Studio Code](https://code.visualstudio.com/download) (optional, strongly recommended)
 
 ## Concepts
 
