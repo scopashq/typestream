@@ -106,6 +106,9 @@ export function runPipeProgress({
 
     progress.stage = 'DONE'
     next(progress)
+
+    errorLogger.close()
+
     await pipeController.stop()
   })
 }
