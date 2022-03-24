@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
+import { createEnv } from './create-env.js'
 import { getPackageJson } from './get-package.js'
 
 const settingsJson = {
@@ -61,4 +62,6 @@ export async function createProjectFiles({
 
   const gitignorePath = join(projectPath, '.gitignore')
   await writeFile(gitignorePath, gitignoreFile)
+
+  await createEnv(projectPath)
 }
