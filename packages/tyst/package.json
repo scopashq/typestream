@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/scopashq/typestream",
-    "path": "packages/tst"
+    "path": "packages/tyst"
   },
   "license": "MIT",
   "author": "Scopas Technologies GmbH",
