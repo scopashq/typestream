@@ -1,6 +1,6 @@
 {
   "name": "create-typestream",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Package to create a TypeStream project",
   "repository": {
     "type": "git",
