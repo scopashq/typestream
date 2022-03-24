@@ -13,19 +13,17 @@ and work with common data storage services either locally or in the cloud.
 
 ## Features
 
-### Debugging experience that matches modern application development
+### Iterate blazingly fast over your transformation code
+When writing software, being able to directly see how the changes you've made affect the output is a key feature for efficient and fun development. Thus we have designed TypeStream in a way that let's you see your transformed data anywhere in your pipeline and update it every time you save your code.
+If there are errors in your transformation you will get an aggregated overview over the complete sample of datapoints your testing on.
 
-Great developer experience is a standard in web-development and should be for data transformation, too. Transform your data while enjoying:
+![](https://storage.googleapis.com/typestream-demo-content/dump.gif)
 
-- ⚡️ Instant reloading to directly see how your changes affect your outputs
-- 🛑 Aggregated error messages over large chunks of data
-- 🔍 Automatically step into a breakpoint if an error occurs
-- ✋ Breakpoints anywhere in your transformation code
+### Step into edge cases, right when they are happening
+When working with a lot of data, it's impossible to know every edge case upfront. That's why you'll hit a breakpoint right when an edge case breaks your transformation code to see what the outlier data looks like.
+You can also set your own breakpoints anywhere in your transformation code and step through one data sample at a time
 
-
-|<img width=500/ src=https://storage.googleapis.com/typestream-demo-content/dump.gif>|<img width=500/ src=https://storage.googleapis.com/typestream-demo-content/error.gif>|
-|:---------:|:---------:|
-| ⚡️⚡️⚡️ | 🔍🔍🔍 |
+![](https://storage.googleapis.com/typestream-demo-content/error.gif)
 
 ### Automatic type inference
 
