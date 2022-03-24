@@ -1,4 +1,4 @@
-import { relative, resolve } from 'node:path'
+import { relative } from 'node:path'
 
 import chalk from 'chalk'
 import ct from 'chalk-template'
