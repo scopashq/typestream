@@ -1,6 +1,6 @@
 {
   "name": "tyst",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI that warns people about using tyst (TypeStream CLI) outside of TypeStream projects",
   "repository": {
     "type": "git",
