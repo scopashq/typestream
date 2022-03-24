@@ -1,5 +1,5 @@
 import * as fs from 'node:fs/promises'
-import { join } from 'node:path'
+import { join, resolve } from 'node:path'
 
 import { Command } from '@oclif/core'
 import chalk from 'chalk'
@@ -19,7 +19,11 @@ export default class CreateProject extends Command {
       chalk.bold.green.inverse(`\n Creating getting started guide... `),
     )
 
-    const projectName = 'typestream-get-started'
+    const projectName = 'typestream-getting-started'
+    const projectPaths = await getProjectPaths({
+      basePath: resolve(projectName),
+      projectName,
+    })
 
     console.log(
       chalk.bold.green.inverse(`\n 1. Creating project "${projectName}" `),
@@ -27,26 +31,20 @@ export default class CreateProject extends Command {
 
     await execa('git', [
       'clone',
-      'https://github.com/scopashq/getting-started-guide.git',
+      'https://github.com/scopashq/typestream-getting-started.git',
       projectName,
     ])
-    await fs.rm(`./${projectName}/.git`, {
-      recursive: true,
-    })
 
-    const path = join(process.cwd(), projectName)
-    const projectPaths = await getProjectPaths({
-      basePath: path,
-      projectName,
-    })
+    const gitDirectoryPath = join(projectName, '.git')
+    await fs.rm(gitDirectoryPath, { recursive: true })
 
     console.log(chalk.bold.green.inverse(`\n 2. Initializing git... `))
     await asyncPipeOut(execa('git', ['init'], { cwd: projectPaths.path }))
 
     console.log(chalk.bold.green.inverse(`\n 3. Creating initial commit... `))
-    await execa('git', ['add', '*'], { cwd: projectPaths.path })
+    await execa('git', ['add', '.'], { cwd: projectPaths.path })
     await asyncPipeOut(
-      execa('git', ['commit', '-am', 'Initial commit'], {
+      execa('git', ['commit', '-m', 'Initial commit'], {
         cwd: projectPaths.path,
       }),
     )
