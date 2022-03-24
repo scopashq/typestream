@@ -1,6 +1,6 @@
 {
   "name": "@typestream/core-protocol",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Internal package used by TypeStream to communicate between the SDK and project code",
   "repository": {
     "type": "git",
