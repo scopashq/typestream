@@ -1,5 +1,6 @@
 import { ErrorSummary } from './error-summary.js'
 
+export type ActiveDumpFiles = { key: string; path: string }[]
 export interface WatchProgress {
   stage: 'BUILD' | 'PROCESS' | 'DONE'
 
@@ -7,6 +8,9 @@ export interface WatchProgress {
 
   /** A summary of the errors that have occurred so far. */
   errorSummary: ErrorSummary
+
+  /** A map of all the dump files that are currently being used by the project */
+  dumpFiles?: ActiveDumpFiles
 }
 
 interface DocumentNumbers {

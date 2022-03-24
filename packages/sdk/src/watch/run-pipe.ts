@@ -54,7 +54,10 @@ export function runPipe(options: PipeRunOptions) {
 
     const resourceRef = await pipeController.loadPipe(options.pipeName, {
       enableSchemaCapturing: options.captureSchemas,
-      dumpFunction: options => dataDumper.dump(options),
+      dumpFunction: options => {
+        dataDumper.dump(options)
+        progress.dumpFiles = dataDumper.activeDumps
+      },
       enableWriting: false,
     })
     const resource = resourceFromRef(resourceRef)

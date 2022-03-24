@@ -1,4 +1,7 @@
+import { relative, resolve } from 'node:path'
+
 import chalk from 'chalk'
+import ct from 'chalk-template'
 
 import { boldBox } from '../utils/chalk-extensions.js'
 import { WatchProgress } from './watch-progress.js'
@@ -8,11 +11,13 @@ export function renderWatchProgress(
   { error }: { error?: Error } = {},
 ) {
   const documentCounts = renderDocumentCounts(progress)
+  const dumpFiles = renderDumpFiles(progress)
 
   const lines: string[] = [
     '▶ ' + chalk.bold(renderProgressingLine(progress)),
     ...(documentCounts ? ['', documentCounts] : []),
     ...(error ? ['', ...chalk.red(error.message).split('\n')] : []),
+    ...(dumpFiles ? ['', dumpFiles] : []),
   ]
 
   if (!progress.errorSummary.isEmpty())
@@ -34,6 +39,19 @@ function renderProgressingLine(progress: WatchProgress) {
       ? ` out of ${progress.documentNumbers.total}…`
       : '…')
   )
+}
+
+function renderDumpFiles(progress: WatchProgress) {
+  if (!progress.dumpFiles || progress.dumpFiles.length === 0) return
+
+  const dumpFiles = progress.dumpFiles.map(x => {
+    const cwd = process.cwd()
+    const path = relative(cwd, x.path)
+    return ct`    - {bold ${x.key}}: ${path}`
+  })
+
+  return chalk.gray(`Currently dumping into:
+${dumpFiles.join('\n')}`)
 }
 
 function renderDocumentCounts(progress: WatchProgress) {
