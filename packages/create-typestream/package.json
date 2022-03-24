@@ -14,9 +14,9 @@
     "create-typestream": "./bin/run.js"
   },
   "files": [
-    "./bin",
-    "./dist",
-    "./samples"
+    "bin",
+    "dist",
+    "samples"
   ],
   "scripts": {
     "build": "rimraf dist && tsc",

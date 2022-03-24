@@ -16,7 +16,7 @@
     "./resources": "./dist/resources/index.js"
   },
   "files": [
-    "./dist"
+    "dist"
   ],
   "scripts": {
     "build": "rimraf dist/ && tsc",

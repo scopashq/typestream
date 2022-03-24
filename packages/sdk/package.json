@@ -14,8 +14,8 @@
     "tyst": "./bin/run.js"
   },
   "files": [
-    "./bin",
-    "./dist"
+    "bin",
+    "dist"
   ],
   "scripts": {
     "build": "rimraf dist && tsc",

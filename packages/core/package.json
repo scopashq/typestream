@@ -17,7 +17,7 @@
     "./html-parser": "./dist/libraries/node-html-parser.js"
   },
   "files": [
-    "./dist"
+    "dist"
   ],
   "scripts": {
     "build": "rimraf dist/ && tsc",

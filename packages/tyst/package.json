@@ -14,7 +14,7 @@
     "tyst": "./index.js"
   },
   "files": [
-    "./index.js"
+    "index.js"
   ],
   "scripts": {
     "check-deps": "depcheck --ignores @types/node",
