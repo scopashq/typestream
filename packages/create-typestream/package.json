@@ -19,7 +19,7 @@
     "./samples"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc -b",
+    "build": "rimraf dist && tsc",
     "check-deps": "depcheck --ignores @types/dotenv",
     "clean": "rimraf dist/ node_modules/",
     "watch": "tsc --watch --preserveWatchOutput"
