@@ -57,7 +57,7 @@ export class PipeController {
     const processingRes = await this.processDocumentCaller.call({
       documentRef,
       data,
-      exposeErrors: !this.debuggingEnabled,
+      exposeErrors: this.debuggingEnabled,
     })
 
     return processingRes
