@@ -101,7 +101,7 @@ export class PipeController {
       this.untilChildProcessReady.promise,
       delay(3000).then(() => {
         throw new Error(
-          'The process is not responding. Try to restart tst watch.',
+          'The process is not responding. Try to restart tyst watch.',
         )
       }),
     ])

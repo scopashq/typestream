@@ -20,7 +20,7 @@ npm install -g @typestream/sdk
 To get started with a guided tutorial:
 
 ```bash
-tst get-started
+tyst get-started
 ```
 
 ## Features
@@ -169,7 +169,7 @@ Transforming a lot of data, you easily find yourself repeating different process
 
 ### `dump()`
 
-While using `tst watch` on a pipe, `dump()` can be used to store all intermediate results into a single file. This can be used to quickly understand how changes in the transformation code affect the output. Every time you save your pipe, dump will overwrite the new intermediate results.
+While using `tyst watch` on a pipe, `dump()` can be used to store all intermediate results into a single file. This can be used to quickly understand how changes in the transformation code affect the output. Every time you save your pipe, dump will overwrite the new intermediate results.
 
 ```typescript
 const intermediateResult = {

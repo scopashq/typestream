@@ -11,7 +11,7 @@
   "author": "Scopas Technologies GmbH",
   "type": "module",
   "bin": {
-    "tst": "./bin/run.js"
+    "tyst": "./bin/run.js"
   },
   "files": [
     "./bin",
@@ -59,7 +59,7 @@
     "node": ">=16.0.0"
   },
   "oclif": {
-    "bin": "tst",
+    "bin": "tyst",
     "dirname": "typestream-sdk",
     "commands": "./dist/commands",
     "plugins": [

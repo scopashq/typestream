@@ -32,7 +32,7 @@ export default class CreateProject extends Command {
 {inverse.green.bold  Getting started with development: }
 
   1. Define a resource and put it into your pipe.
-  2. Run: {italic.bold tst watch ${args.pipeName}} to see how your code is working.
+  2. Run: {italic.bold tyst watch ${args.pipeName}} to see how your code is working.
 
 
   Your pipe file: {underline ${paths.pipe.sourceFileName}}

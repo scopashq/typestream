@@ -62,7 +62,7 @@ export default class CreateProject extends Command {
 {green.bold.inverse  Getting started: }
 
   1. Go to your project folder: {bold.italic cd ${projectPaths.name}}
-  2. Create a new pipe: {bold.italic tst create-pipe <your-pipe-name>}
+  2. Create a new pipe: {bold.italic tyst create-pipe <your-pipe-name>}
 
 
 ${SELECT_TYPESCRIPT_HINT}

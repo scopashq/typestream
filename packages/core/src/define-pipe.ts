@@ -13,7 +13,7 @@ type PipeContext<Doc extends AnyDocument> = {
   /**
    * With publish you write your transformed data to your output resource.
    * The target can be either a local directory or a cloud storage.
-   * If you are done developing this pipe, type `tst process` to actually
+   * If you are done developing this pipe, type `tyst process` to actually
    * publish all your inputs
    * @param {FileResource} resource The resource to which you publish the data
    * @param data The data you publish (in form of a buffer)
