@@ -6,10 +6,7 @@ import chalk from 'chalk'
 
 import { typescriptHint } from './print-getting-started.js'
 
-export async function createTutorialPipe(
-  projectName: string,
-  projectPath: string,
-) {
+export async function createTutorialPipe(projectPath: string) {
   const getStartedPipeFile = join(
     fileURLToPath(import.meta.url),
     '../../samples/get-started.ts',
@@ -23,6 +20,10 @@ export async function createTutorialPipe(
   )
   await copyFile(getStartedPipeFile, destinationPath)
 
+  return destinationPath
+}
+
+export function printTutorial(projectName: string, destinationPath: string) {
   console.log(`
 ${boldGreenBox('4. Your getting started guide is ready to use 🎉 Have fun!')}
 

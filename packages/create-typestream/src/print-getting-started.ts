@@ -1,5 +1,7 @@
 import chalk from 'chalk'
 
+import { logStage } from './log-stage.js'
+
 const hintBlock = chalk.bold.inverse(' Hint: ')
 
 const link = chalk.underline(
@@ -11,8 +13,9 @@ export const typescriptHint =
 Do it in VSCode: ${link}`)
 
 export function printGettingStarted(projectName: string) {
-  console.log(
-    `
+  logStage('4. Your project is all set up! 🎉')
+  console.log(`
+
 
 ${boldBox('Get started with your project:')}
 
@@ -23,8 +26,7 @@ ${boldBox('Get started with your project:')}
 
 
 ${typescriptHint}
-  `,
-  )
+  `)
 }
 
 function boldBox(text: string) {
