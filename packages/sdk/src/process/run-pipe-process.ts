@@ -39,7 +39,7 @@ export function runPipeProgress({
         `For debugging, the processing concurrency can't be ${concurrency} and will be set to 1.`,
       ),
     )
-    concurrency
+    concurrency = 1
   }
 
   return observeAsync<WatchProgress>(async next => {
