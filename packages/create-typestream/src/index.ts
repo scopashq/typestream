@@ -1,3 +1,6 @@
+import { access } from 'node:fs/promises'
+import { exit } from 'node:process'
+
 import chalk from 'chalk'
 
 import { createProjectFiles } from './create-project-files.js'
@@ -11,6 +14,8 @@ async function main() {
   const getStartedGuide = process.argv.includes('--get-started')
 
   const { projectName, projectPath } = await getProjectName()
+
+  await assertDirEmpty(projectPath)
 
   logStage(`1. Creating project ${projectName}`)
   console.log(`at: ${projectPath}...`)
@@ -29,6 +34,20 @@ async function main() {
     logStage('4. Your project is all set up! 🎉')
 
     printGettingStarted(projectName)
+  }
+}
+
+async function assertDirEmpty(path: string) {
+  try {
+    await access(path)
+    console.log(
+      chalk.bold.red(
+        `\nThe dir (${path}) is not empty. Use another name for your project!\n`,
+      ),
+    )
+    exit(1)
+  } catch {
+    return true
   }
 }
 
