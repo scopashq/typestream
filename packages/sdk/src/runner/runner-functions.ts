@@ -23,7 +23,7 @@ type DocumentProcessResult = {
 }
 
 export const processDocumentRef = new IpcFunctionRef<
-  { documentRef: DocumentRef; data: any },
+  { documentRef: DocumentRef; data: any; exposeErrors: boolean },
   DocumentProcessResult
 >('processDocument')
 

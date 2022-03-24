@@ -67,23 +67,27 @@ function implementDump() {
 }
 
 function implementDocumentProcessing(bundle: BundleSchema.Bundle) {
-  processDocumentRef.implement(process, async ({ data, documentRef }) => {
-    const documentsToPublish: PublishArgs<AnyResource>[] = []
-    const doc = bundle.resource.buildDocument(documentRef, async () => data)
+  processDocumentRef.implement(
+    process,
+    async ({ data, documentRef, exposeErrors }) => {
+      const documentsToPublish: PublishArgs<AnyResource>[] = []
+      const doc = bundle.resource.buildDocument(documentRef, async () => data)
 
-    // `catchButNotReally` is used to allow the debugger to jump to errors from
-    // the pipe while still allowing us to catch and react to errors here
-    await catchButNotReally(() =>
-      bundle.call(doc, {
-        publish: x => {
-          documentsToPublish.push(x)
-          x.resource
-        },
-      }),
-    )
+      const callBundle = () =>
+        bundle.call(doc, {
+          publish: x => {
+            documentsToPublish.push(x)
+            x.resource
+          },
+        })
 
-    return { documentsToPublish }
-  })
+      // `catchButNotReally` is used to allow the debugger to jump to errors from
+      // the pipe while still allowing us to catch and react to errors here
+      await (exposeErrors ? catchButNotReally(callBundle) : callBundle())
+
+      return { documentsToPublish }
+    },
+  )
 }
 
 function sendMessage(message: CustomMessage) {
