@@ -206,7 +206,7 @@ Utilities to write more readable code when dealing with arrays
 ```typescript
 products.sort(basedOn((_) => _.price, 'desc'))
 products.sort(basedOnKey('price', 'desc'))
-products.sort(basedOnMultiple([['price', 'desc'], ['discount', 'asc]]))
+products.sort(basedOnMultiple([['price', 'desc'], ['discount', 'asc']]))
 
 sumOf(products.map(product => product.price))
 ```
