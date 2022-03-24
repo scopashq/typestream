@@ -12,7 +12,8 @@
   },
   "files": [
     "./bin",
-    "./dist"
+    "./dist",
+    "./samples"
   ],
   "license": "MIT",
   "author": "Scopas Technologies GmbH",

@@ -6,7 +6,7 @@ const link = chalk.underline(
   'https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript',
 )
 
-const hint =
+export const typescriptHint =
   chalk.yellow(`${hintBlock} Make sure that you are using the workspace typescript version.
 Do it in VSCode: ${link}`)
 
@@ -22,7 +22,7 @@ ${boldBox('Get started with your project:')}
   )}
 
 
-${hint}
+${typescriptHint}
   `,
   )
 }
