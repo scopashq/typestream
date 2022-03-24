@@ -42,15 +42,15 @@ export class DataDumper {
     if (!this.dumpsMap.has(name)) {
       assertDumpName(name)
       const writingSubject = new Subject<void>()
+      let lastPromise = Promise.resolve()
+
       writingSubject
         .pipe(
-          throttleTime(100),
-          throttle(async () => {
-            return this.entryToFile(name)
-          }),
+          throttleTime(100, undefined, { leading: false, trailing: true }),
+          throttle(() => lastPromise, { leading: false, trailing: true }),
         )
         .subscribe(() => {
-          //
+          lastPromise = this.entryToFile(name)
         })
 
       this.dumpsMap.set(name, {
