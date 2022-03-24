@@ -67,7 +67,7 @@ function renderDocumentCounts(progress: WatchProgress) {
       color: chalk.green,
     },
     { value: rawCounts.failed, label: 'failed', color: chalk.red },
-    { value: rawCounts.published, label: 'published', color: chalk.blue },
+    { value: rawCounts.published, label: 'results', color: chalk.blue },
   ]
 
   return counts
