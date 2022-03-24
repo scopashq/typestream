@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "importHelpers": true,
     "outDir": "dist",
     "rootDir": "src",
     "strict": true,
     "target": "ES2021",
     "module": "NodeNext",
-    "skipLibCheck": true,
-    "sourceMap": true
+    "skipLibCheck": true
   },
   "include": ["src/**/*"]
 }
