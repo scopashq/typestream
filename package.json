@@ -13,7 +13,8 @@
     "fix": "yarn lint --fix ; yarn format --list-different",
     "format": "prettier --write .",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore packages/*/src",
-    "release": "yarn build && lerna publish --no-private",
+    "release:publish": "lerna publish from-git",
+    "release:version": "lerna version --no-private --message 'Publish packages'",
     "watch": "yarn build && lerna run watch --parallel"
   },
   "devDependencies": {
