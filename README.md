@@ -4,6 +4,13 @@
 
 [![](https://img.shields.io/npm/v/@typestream/sdk?style=flat-square)](https://www.npmjs.com/package/@typestream/sdk)
 
+Nowadays, almost every developer is working with increasingly complex and varying types of data.
+While tooling for this problem already exists, current solutions are heavy to use, targeted towards big enterprises
+and put little to no emphasis on developer experience.
+
+TypeStream allows you to get started within seconds, iterate blazingly fast over type-safe transformation code
+and work with common data storage services either locally or in the cloud.
+
 ## Installation
 
 ```bash
@@ -15,13 +22,6 @@ To get started with a guided tutorial:
 ```bash
 tst get-started
 ```
-
-Nowadays, almost every developer is working with increasingly complex and varying types of data.
-While tooling for this problem already exists, current solutions are heavy to use, targeted towards big enterprises
-and put little to no emphasis on developer experience.
-
-TypeStream allows you to get started within seconds, iterate blazingly fast over type-safe transformation code
-and work with common data storage services either locally or in the cloud.
 
 ## Features
 
