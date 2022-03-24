@@ -4,6 +4,18 @@
 
 [![](https://img.shields.io/npm/v/@typestream/sdk?style=flat-square)](https://www.npmjs.com/package/@typestream/sdk)
 
+## Installation
+
+```bash
+npm install -g @typestream/sdk
+```
+
+To get started with a guided tutorial:
+
+```bash
+tst get-started
+```
+
 Nowadays, almost every developer is working with increasingly complex and varying types of data.
 While tooling for this problem already exists, current solutions are heavy to use, targeted towards big enterprises
 and put little to no emphasis on developer experience.
@@ -46,18 +58,6 @@ For TypeStream to work, you will need to have the following software installed a
 
 - [Node.js](https://nodejs.org/en/download/) (minimum version 16.0.0)
 - [Visual Studio Code](https://code.visualstudio.com/download) (optional, strongly recommended)
-
-## Installation
-
-```bash
-npm install -g @typestream/sdk
-```
-
-To get started with a guided tutorial:
-
-```bash
-tst get-started
-```
 
 ## Concepts
 
