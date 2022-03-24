@@ -16,7 +16,7 @@ and work with common data storage services either locally or in the cloud.
 Make sure you have [Node.js](https://nodejs.dev/) (at least 16.0.0) installed and scaffold a new project using:
 
 ```bash
-$ npm init typestream --get-started
+$ npm init typestream -- --get-started
 ```
 
 ### Opening the project
