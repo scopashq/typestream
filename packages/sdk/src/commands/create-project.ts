@@ -61,6 +61,10 @@ export default class CreateProject extends Command {
 
   1. Go to your project folder: {bold.italic cd ${projectPaths.name}}
   2. Create a new pipe: {bold.italic tst create-pipe <your-pipe-name>}
+
+
+{yellow {bold.inverse  Hint: } Make sure that you are using the workspace typescript version.
+Do it in VSCode: {underline https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript}}
   `,
     )
   }
