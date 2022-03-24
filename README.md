@@ -1,6 +1,6 @@
 # TypeStream
 
-> A lightweight, easy-to-use Node.js framework for rapid, type-safe data transformation
+> Next-generation data transformation framework for TypeScript that puts developer experience first
 
 [![](https://img.shields.io/npm/v/@typestream/sdk?style=flat-square)](https://www.npmjs.com/package/@typestream/sdk)
 
