@@ -33,11 +33,11 @@ export class PipeController {
 
   private dumpFunction: DumpFunction | undefined = undefined
 
-  constructor(public readonly deuggingEnabled = false) {
+  constructor(public readonly debuggingEnabled = false) {
     this.childProcess = fork(WORKER_PATH, {
       // Ignore stdin, stdout, and stderr, but set up channel for IPC
       stdio: ['ignore', 'ignore', 'ignore', 'ipc'],
-      execArgv: this.deuggingEnabled ? ['--inspect'] : [],
+      execArgv: this.debuggingEnabled ? ['--inspect'] : [],
       serialization: 'advanced',
     })
     this.attachMessageHandlers()
@@ -57,7 +57,7 @@ export class PipeController {
     const processingRes = await this.processDocumentCaller.call({
       documentRef,
       data,
-      exposeErrors: !this.deuggingEnabled,
+      exposeErrors: !this.debuggingEnabled,
     })
 
     return processingRes
