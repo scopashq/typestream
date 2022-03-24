@@ -2,7 +2,7 @@
 
 > A lightweight, easy-to-use Node.js framework for rapid, type-safe data transformation
 
-[![](https://img.shields.io/npm/v/typestream?style=flat-square)](https://www.npmjs.com/package/typestream)
+[![](https://img.shields.io/npm/v/@typestream/sdk?style=flat-square)](https://www.npmjs.com/package/@typestream/sdk)
 
 Nowadays, almost every developer is working with increasingly complex and varying types of data.
 While tooling for this problem already exists, current solutions are heavy to use, targeted towards big enterprises
