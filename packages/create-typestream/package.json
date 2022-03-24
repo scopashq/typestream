@@ -7,6 +7,9 @@
     "url": "https://github.com/scopashq/typestream",
     "path": "packages/create-typestream"
   },
+  "license": "MIT",
+  "author": "Scopas Technologies GmbH",
+  "type": "module",
   "bin": {
     "create-typestream": "./bin/run.js"
   },
@@ -15,9 +18,6 @@
     "./dist",
     "./samples"
   ],
-  "license": "MIT",
-  "author": "Scopas Technologies GmbH",
-  "type": "module",
   "scripts": {
     "build": "rimraf dist && tsc -b",
     "check-deps": "depcheck --ignores @types/dotenv",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/node": "16",
+    "@typestream/core": "^0.0.4",
     "typescript": "^4.7.0-dev.20220216"
   },
   "engines": {

@@ -17,7 +17,7 @@
     "./index.js"
   ],
   "scripts": {
-    "check-deps": "depcheck",
+    "check-deps": "depcheck --ignores @types/node",
     "clean": "rimraf node_modules/"
   },
   "dependencies": {

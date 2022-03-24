@@ -1,4 +1,8 @@
 {
   "compilerOptions": { "noEmit": true },
-  "include": ["./.eslintrc.cjs", "./packages/cli/bin/*.js"]
+  "include": [
+    "./.eslintrc.cjs",
+    "./packages/cli/bin/*.js",
+    "./packages/create-typestream/samples/*.ts"
+  ]
 }

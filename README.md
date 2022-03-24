@@ -46,12 +46,14 @@ At this point, feel free to play around with the code and give all of TypeStream
 ## Features
 
 ### Iterate blazingly fast over your transformation code
+
 When writing software, being able to directly see how the changes you've made affect the output is a key feature for efficient and fun development. Thus we have designed TypeStream in a way that let's you see your transformed data anywhere in your pipeline and update it every time you save your code.
 If there are errors in your transformation you will get an aggregated overview over the complete sample of datapoints your testing on.
 
 ![](https://storage.googleapis.com/typestream-demo-content/dump.gif)
 
 ### Step into edge cases, right when they are happening
+
 When working with a lot of data, it's impossible to know every edge case upfront. That's why you'll hit a breakpoint right when an edge case breaks your transformation code to see what the outlier data looks like.
 You can also set your own breakpoints anywhere in your transformation code and step through one data sample at a time
 
@@ -215,9 +217,14 @@ const hydration = extractJsonScriptsFromDocument(htmlElement)
 Utilities to write more readable code when dealing with arrays
 
 ```typescript
-products.sort(basedOn((_) => _.price, 'desc'))
+products.sort(basedOn(_ => _.price, 'desc'))
 products.sort(basedOnKey('price', 'desc'))
-products.sort(basedOnMultiple([['price', 'desc'], ['discount', 'asc']]))
+products.sort(
+  basedOnMultiple([
+    ['price', 'desc'],
+    ['discount', 'asc'],
+  ]),
+)
 
 sumOf(products.map(product => product.price))
 ```
