@@ -11,11 +11,11 @@ import {
  * The Getting Started Guide will walk you through
  * how to use Typestream to transform your data faster.
  *
- * The developer experience of TypeStream is all based on the `tst watch` command that
+ * The developer experience of TypeStream is all based on the `tyst watch` command that
  * executes your code as soon as you do changes and gives you insights about it's performance.
  *
  * Use it with:
- * tst watch getting-started-pipe
+ * tyst watch getting-started-pipe
  *
  * You will access to a data set provided by us (typestream team)
  * via the Google Cloud Storage. To load the data accordingly, we have created a resource
@@ -103,7 +103,7 @@ export default definePipe(eCommerceProduct, async ctx => {
    * With publish you write your transformed data to your output resource.
    * The target can be either any typestream resource that you define.
    *
-   * If you are done developing this pipe, type `tst process` to actually
+   * If you are done developing this pipe, type `tsyt process` to actually
    * process and publish all your inputs. You can than see the results in the folder
    * defined in the resource "transformedProduct".
    */
