@@ -10,6 +10,8 @@ import { createProject } from '../project/create-project.js'
 import { asyncPipeOut } from '../utils/async-pipe-out.js'
 import { installDependencies } from '../utils/install-dependencies.js'
 
+export const SELECT_TYPESCRIPT_HINT = ct`{yellow {bold.inverse  Hint: } Make sure that you are using the workspace typescript version.
+Do it in VSCode: {underline https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript}}`
 export default class CreateProject extends Command {
   static description = 'Scaffold a new TypeStream project.'
 
@@ -63,8 +65,7 @@ export default class CreateProject extends Command {
   2. Create a new pipe: {bold.italic tst create-pipe <your-pipe-name>}
 
 
-{yellow {bold.inverse  Hint: } Make sure that you are using the workspace typescript version.
-Do it in VSCode: {underline https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript}}
+${SELECT_TYPESCRIPT_HINT}
   `,
     )
   }
