@@ -1,5 +1,3 @@
-const noValue = Symbol('noValue')
-
 interface DumpOptions {
   /** Only if the condition is truthy, data will be dumped */
   condition?: any
@@ -19,14 +17,10 @@ interface DumpOptions {
  *
  * **Dump will do nothing in production.**
  */
-export function dump(
-  value: any,
-  {
-    condition = noValue,
-    name = 'default',
-    skipDuplicates = false,
-  }: DumpOptions = {},
-) {
-  if (condition === noValue || condition)
+export function dump(value: any, options: DumpOptions = {}) {
+  const { condition, name = 'default', skipDuplicates = false } = options
+  const hasCondition = 'condition' in options
+
+  if (!hasCondition || condition)
     globalThis.typestreamWriteDump?.({ data: value, name, skipDuplicates })
 }
