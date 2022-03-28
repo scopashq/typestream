@@ -17,16 +17,15 @@ export async function createTypeMap(projectPaths: ProjectPaths) {
 
   const interfaceProperties = keys.map(key => `${key}: ${key}`)
 
-  const body = `
-  declare global {
-    namespace TypeStream {
-      export interface Types {
-${interfaceProperties.map(x => `        ${x}`).join('\n')}
-      }
+  const body = `declare global {
+  namespace TypeStream {
+    export interface Types {
+${interfaceProperties.map(x => `      ${x}`).join('\n')}
     }
-  }`
+  }
+}`
 
-  const file = [...importLines, body].join('\n')
+  const file = [...importLines, '', body].join('\n') + '\n'
 
   await mkdir(projectPaths.typesPath, { recursive: true })
   await writeFile(projectPaths.typeMapPath, file)
