@@ -70,6 +70,10 @@ export class BigQueryTable<T> {
    */
   async insert(rows: T[]) {
     const parsedRows = rows.map(x => this.zodSchema.parse(x))
+    if (parsedRows.length === 0)
+      throw new Error(
+        'You must provide at least one or moew row to insert to BigQuery!',
+      )
 
     if (!globalThis.typestreamWritingActive) return
     await (this.setSchemaPromise ??= this.updateSchema())
