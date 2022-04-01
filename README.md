@@ -8,8 +8,11 @@ Nowadays, almost every developer is working with increasingly complex and varyin
 While tooling for this problem already exists, current solutions are heavy to use, targeted towards big enterprises
 and put little to no emphasis on developer experience.
 
-TypeStream allows you to get started within seconds, iterate blazingly fast over type-safe transformation code
-and work with common data storage services either locally or in the cloud.
+TypeStream allows you to get started within seconds, iterate blazingly fast over type-safe transformation code and work with common data storage services either locally or in the cloud.
+
+Here's how it could be integrated into your workflow:
+
+![](https://storage.googleapis.com/typestream-demo-content/flow-illustration.png)
 
 ## Getting started
 
