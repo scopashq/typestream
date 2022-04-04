@@ -62,7 +62,9 @@ export function runPipeProgress({
 
     const resourceRef = await pipeController.loadPipe(paths.pipe.name, {
       enableSchemaCapturing: false,
-      dumpFunction: options => dataDumper.dump(options),
+      dumpFunction: debuggingEnabled
+        ? options => dataDumper.dump(options)
+        : undefined,
       enableWriting: true,
     })
     const resource = resourceFromRef(resourceRef)
