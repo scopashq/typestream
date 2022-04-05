@@ -3,9 +3,6 @@ export function getPipeCode() {
 import { definePipe, typed, dump } from '@typestream/core'
 
 /**
- * To get started:
- * TODO: write getting started guide
- *
  * Get automatically typed data:
  * "const typedData = typed('TypeName', unknownObject)"
  *
