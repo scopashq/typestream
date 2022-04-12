@@ -1,6 +1,6 @@
 {
   "name": "create-typestream",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Package to create a TypeStream project",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@types/node": "16",
-    "@typestream/core": "^0.0.7",
+    "@typestream/core": "^0.0.8",
     "typescript": "^4.7.0-dev.20220216"
   },
   "engines": {
