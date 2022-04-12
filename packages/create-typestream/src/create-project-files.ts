@@ -31,6 +31,7 @@ const gitignoreFile = `/node_modules
 /builds
 /sample-data
 /dump-files
+/credentials
 
 .DS_Store
 `

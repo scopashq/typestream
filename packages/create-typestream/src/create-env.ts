@@ -8,7 +8,7 @@ export async function createEnv(path: string) {
 # Google Cloud Platform
 # If you want to store them inside of your project you can create a
 # \`credentials\` folder which is already included in the .gitignore
-GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/service-account-key.json
+# GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/service-account-key.json
 
 # AWS
 # AWS_ACCESS_KEY_ID=
